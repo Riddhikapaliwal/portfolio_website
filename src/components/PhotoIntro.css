@@ -1,0 +1,208 @@
+/* ==============================================================================
+   PHOTO INTRO STYLES
+   Editorial portrait, circular black border, pure white background
+   ============================================================================== */
+
+.photo-intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: introFadeIn 400ms ease forwards;
+}
+
+@keyframes introFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.photo-intro-topbar {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+}
+
+.skip-intro-text-btn {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #888888;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.75rem;
+  transition: color 150ms ease;
+}
+
+.skip-intro-text-btn:hover {
+  color: #000000;
+}
+
+.photo-intro-center-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 480px;
+}
+
+/* Portrait Composition */
+.portrait-composition {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+  animation: portraitScaleIn 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes portraitScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Circular Frame with Crisp Black Border */
+.portrait-circle-frame {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  padding: 6px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(100%) contrast(105%);
+}
+
+/* Close button placed near photo, not over face */
+.photo-close-btn {
+  position: absolute;
+  top: 0;
+  right: -14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.photo-close-btn:hover {
+  transform: scale(1.1);
+  background-color: #333333;
+}
+
+/* Caption Underneath */
+.portrait-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: captionFadeUp 450ms 150ms ease both;
+}
+
+@keyframes captionFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.caption-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #000000;
+  line-height: 1.1;
+}
+
+.caption-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: #666666;
+  text-transform: uppercase;
+}
+
+/* Proceed hint */
+.intro-proceed-hint {
+  margin-top: 2rem;
+  animation: captionFadeUp 450ms 300ms ease both;
+}
+
+.continue-prompt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-headline);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #111111;
+  padding: 0.65rem 1.4rem;
+  border: 1px solid #111111;
+  transition: all 180ms ease;
+}
+
+.continue-prompt-btn:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.continue-prompt-btn:hover .prompt-arrow {
+  transform: translateX(3px);
+}
+
+.prompt-arrow {
+  transition: transform 150ms ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .portrait-circle-frame {
+    width: 190px;
+    height: 190px;
+  }
+  .photo-close-btn {
+    right: -8px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+  }
+  .photo-intro-topbar {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}

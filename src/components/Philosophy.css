@@ -1,0 +1,84 @@
+/* ==============================================================================
+   WHAT I'M FIGURING OUT COMPONENT STYLES
+   Editorial 4-item matrix, minimalist lines, personal snapshot
+   ============================================================================== */
+
+.learning-snapshot-section {
+  background-color: #FFFFFF;
+}
+
+.learning-header-block {
+  margin-bottom: 4.5rem;
+}
+
+.learning-editorial-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #000000;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+
+.learning-editorial-sub {
+  font-size: 1.15rem;
+  color: #666666;
+  max-width: 600px;
+}
+
+/* 4-Item Matrix */
+.learning-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  border-top: 1px solid #000000;
+  padding-top: 3rem;
+}
+
+.learning-goal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.goal-top-marker {
+  display: flex;
+  align-items: baseline;
+}
+
+.goal-num {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.goal-topic-title {
+  font-family: var(--font-headline);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #000000;
+  line-height: 1.25;
+}
+
+.goal-detail-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #555555;
+}
+
+@media (max-width: 960px) {
+  .learning-matrix-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .learning-matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

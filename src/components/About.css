@@ -1,0 +1,140 @@
+/* ==============================================================================
+   ABOUT EDITORIAL COMPONENT STYLES
+   Pure typography & whitespace, no cards, editorial two-column layout
+   ============================================================================== */
+
+.about-editorial-section {
+  background-color: #FFFFFF;
+}
+
+.about-editorial-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-text-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-large-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #000000;
+  line-height: 1.05;
+}
+
+.about-narrative-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-lead-para {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #222222;
+  font-weight: 400;
+}
+
+.about-education-line {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.9375rem;
+}
+
+.edu-tag {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #888888;
+}
+
+.edu-content {
+  color: #333333;
+}
+
+/* Right Note Column */
+.about-note-column {
+  padding-top: 1.5rem;
+}
+
+.editorial-note-block {
+  border: 1px solid #000000;
+  padding: 2.25rem;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.note-header-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.note-title {
+  font-family: var(--font-headline);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.note-year {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #888888;
+}
+
+.note-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.note-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: #111111;
+  line-height: 1.5;
+}
+
+.arrow-bullet {
+  color: #000000;
+  font-weight: bold;
+}
+
+.note-bottom-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.45;
+  color: #555555;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-light);
+}
+
+@media (max-width: 900px) {
+  .about-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

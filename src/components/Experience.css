@@ -1,0 +1,189 @@
+/* ==============================================================================
+   EXPERIENCE TIMELINE COMPONENT STYLES
+   Vertical line timeline, no cards, clean typography
+   ============================================================================== */
+
+.experience-timeline-section {
+  background-color: #FFFFFF;
+}
+
+.experience-header-block {
+  margin-bottom: 4.5rem;
+}
+
+.experience-editorial-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #000000;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+
+.experience-editorial-sub {
+  font-size: 1.15rem;
+  color: #666666;
+  max-width: 600px;
+}
+
+/* Minimal Vertical Timeline */
+.minimal-vertical-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-entry-row {
+  display: grid;
+  grid-template-columns: 200px 32px 1fr;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Left Year Column */
+.timeline-year-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 0.25rem;
+}
+
+.timeline-big-year {
+  font-family: var(--font-headline);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1;
+}
+
+.timeline-period-text {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  color: #777777;
+}
+
+.timeline-loc-text {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  color: #999999;
+}
+
+/* Spine Column */
+.timeline-spine-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.spine-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000000;
+  margin-top: 0.75rem;
+  z-index: 2;
+}
+
+.spine-line {
+  width: 1px;
+  background-color: var(--border-light);
+  flex: 1;
+  margin-top: 0.25rem;
+}
+
+/* Details Column */
+.timeline-details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 4rem;
+}
+
+.role-company-lockup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.timeline-role-title {
+  font-family: var(--font-headline);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.timeline-company-name {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #444444;
+}
+
+.timeline-work-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.block-label {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #888888;
+}
+
+.timeline-bullets-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.timeline-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #222222;
+}
+
+.bullet-dash {
+  color: #000000;
+  font-weight: bold;
+}
+
+.timeline-learnings-block {
+  padding-left: 1.25rem;
+  border-left: 2px solid #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.learned-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+@media (max-width: 768px) {
+  .timeline-entry-row {
+    grid-template-columns: 24px 1fr;
+    gap: 1.25rem;
+  }
+  .timeline-year-column {
+    grid-column: 2;
+    padding-bottom: 0.5rem;
+  }
+  .timeline-spine-column {
+    grid-row: 1 / span 2;
+  }
+  .timeline-details-column {
+    grid-column: 2;
+  }
+}

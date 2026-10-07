@@ -1,0 +1,120 @@
+/* ==============================================================================
+   FOOTER EDITORIAL COMPONENT STYLES
+   Minimalist black ink on white paper, stark typography
+   ============================================================================== */
+
+.editorial-footer {
+  background-color: #FFFFFF;
+  border-top: 1px solid #000000;
+  padding: 4rem 0 3.5rem;
+}
+
+.footer-content-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.footer-meta-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-author-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand-title {
+  font-family: var(--font-headline);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.footer-colophon {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #777777;
+}
+
+.footer-top-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 1px;
+  transition: opacity 150ms ease;
+}
+
+.footer-top-trigger:hover {
+  opacity: 0.5;
+}
+
+.footer-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  color: #888888;
+  flex-wrap: wrap;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legal-dot {
+  color: #CCCCCC;
+}
+
+.footer-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-text-link {
+  color: #555555;
+  transition: color 150ms ease;
+}
+
+.footer-text-link:hover {
+  color: #000000;
+}
+
+.footer-alt-link {
+  color: #000000;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-light);
+  transition: border-color 150ms ease;
+}
+
+.footer-alt-link:hover {
+  border-bottom-color: #000000;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

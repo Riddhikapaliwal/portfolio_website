@@ -1,0 +1,526 @@
+/* ==============================================================================
+   PROJECTS EDITORIAL COMPONENT STYLES
+   Distinct compositional layouts per project, non-identical shape treatments
+   ============================================================================== */
+
+.projects-editorial-section {
+  background-color: #FFFFFF;
+}
+
+.projects-header-block {
+  margin-bottom: 5rem;
+}
+
+.projects-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #000000;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+
+.projects-main-subtitle {
+  font-size: 1.15rem;
+  color: #666666;
+  max-width: 600px;
+}
+
+.projects-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+/* Individual Project Row */
+.editorial-project-row {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 5rem;
+  align-items: center;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.editorial-project-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Reversed Layout */
+.editorial-project-row.row-reversed {
+  grid-template-columns: 1.15fr 1fr;
+}
+
+.editorial-project-row.row-reversed .project-visual-column {
+  order: 1;
+}
+
+.editorial-project-row.row-reversed .project-text-column {
+  order: 2;
+}
+
+/* Narrow Editorial Layout */
+.editorial-project-row.row-narrow {
+  grid-template-columns: 1.1fr 1.1fr;
+}
+
+/* Text Column */
+.project-text-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.project-num-marker {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.08em;
+}
+
+.project-dev-badge {
+  font-size: 0.6875rem;
+  color: #666666;
+  background-color: #F0F0F0;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid #E5E5E5;
+}
+
+.project-headline-title {
+  font-family: var(--font-headline);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #000000;
+  line-height: 1.1;
+}
+
+.project-lead-desc {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: #333333;
+}
+
+.project-tech-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #666666;
+  flex-wrap: wrap;
+}
+
+.tech-kicker {
+  font-weight: 700;
+  color: #000000;
+}
+
+/* "WHAT I BUILT" list */
+.what-i-built-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-top: 0.5rem;
+}
+
+.built-heading {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.08em;
+}
+
+.built-items-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
+}
+
+.built-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: #444444;
+}
+
+.bullet-arrow {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Action Links */
+.project-action-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-headline);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2px;
+  transition: opacity 150ms ease;
+}
+
+.project-link-btn:hover {
+  opacity: 0.6;
+}
+
+.project-link-btn.live {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.project-link-btn.live:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+  opacity: 1;
+}
+
+/* ==============================================================================
+   DIFFERENT FRAME TREATMENTS FOR VISUAL COLUMN
+   ============================================================================== */
+
+.project-frame {
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+}
+
+/* 1. Square Frame (Sharp Corners) */
+.square-frame {
+  border-radius: 0;
+}
+
+/* 2. Rounded Frame (Subtle Radius) */
+.rounded-frame {
+  border-radius: 8px;
+}
+
+/* 3. Browser Window Frame */
+.browser-window-frame {
+  border-radius: 4px;
+}
+
+/* Frame Headers */
+.frame-header-simple {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #000000;
+  background-color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #000000;
+}
+
+.frame-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.frame-status {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.browser-chrome-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1rem;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #000000;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.browser-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  background-color: transparent;
+}
+
+.browser-address {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #666666;
+}
+
+.browser-status-chip {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Frame Canvas Contents */
+.frame-canvas {
+  padding: 1.75rem;
+  background-color: #FFFFFF;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Loop Out Canvas */
+.loopout-canvas {
+  background: #FAFAFA;
+}
+
+.campus-sim-card {
+  border: 1px solid #000000;
+  background-color: #FFFFFF;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sim-user-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sim-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.sim-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.sim-sub {
+  font-size: 0.75rem;
+  color: #666666;
+}
+
+.sim-rep {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  border: 1px solid #000000;
+  padding: 0.15rem 0.45rem;
+}
+
+.sim-skills-row {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.sim-skill-chip {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  background-color: #F0F0F0;
+  padding: 0.2rem 0.45rem;
+  color: #111111;
+}
+
+.sim-post-box {
+  padding: 0.75rem;
+  background-color: #FAFAFA;
+  border-left: 2px solid #000000;
+  font-size: 0.8125rem;
+}
+
+.sim-post-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #888888;
+  margin-bottom: 0.2rem;
+}
+
+.sim-post-body {
+  color: #222222;
+  font-style: italic;
+}
+
+/* Messenger Canvas */
+.messenger-canvas {
+  background: #FFFFFF;
+}
+
+.chat-sim-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.chat-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+  gap: 0.2rem;
+}
+
+.chat-msg.incoming {
+  align-self: flex-start;
+}
+
+.chat-msg.outgoing {
+  align-self: flex-end;
+}
+
+.msg-author {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #888888;
+}
+
+.msg-bubble {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  border: 1px solid #000000;
+}
+
+.chat-msg.incoming .msg-bubble {
+  background-color: #F7F7F7;
+  color: #111111;
+}
+
+.chat-msg.outgoing .msg-bubble {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.chat-typing-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #666666;
+  margin-top: 0.5rem;
+}
+
+.typing-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+/* Browser / NewsAgent Canvas */
+.browser-canvas {
+  background: #FAFAFA;
+}
+
+.agent-pipeline-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.agent-query-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.query-label {
+  font-weight: 700;
+  color: #000000;
+}
+
+.query-val {
+  color: #333333;
+}
+
+.agent-pipeline-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.pipeline-step {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--border-light);
+  background-color: #FFFFFF;
+}
+
+.pipeline-step.completed {
+  border-left: 2px solid #000000;
+}
+
+.pipeline-step.active {
+  border: 1px dashed #000000;
+  font-weight: 600;
+}
+
+.step-idx {
+  color: #888888;
+}
+
+@media (max-width: 960px) {
+  .editorial-project-row,
+  .editorial-project-row.row-reversed,
+  .editorial-project-row.row-narrow {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .editorial-project-row.row-reversed .project-visual-column {
+    order: 2;
+  }
+  .editorial-project-row.row-reversed .project-text-column {
+    order: 1;
+  }
+}

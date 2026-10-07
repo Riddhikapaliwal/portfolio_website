@@ -1,0 +1,151 @@
+/* ==============================================================================
+   CONTACT EDITORIAL COMPONENT STYLES
+   Large expressive typography, no cards, editorial magazine ending
+   ============================================================================== */
+
+.contact-editorial-section {
+  background-color: #FFFFFF;
+}
+
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Left Column */
+.contact-headline-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.giant-contact-headline {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-headline);
+  font-size: clamp(3.75rem, 8vw, 7.5rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.giant-contact-line {
+  display: block;
+}
+
+.contact-questions-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-family: var(--font-headline);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #555555;
+  border-left: 2px solid #000000;
+  padding-left: 1.25rem;
+}
+
+.contact-closing-note {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #666666;
+  max-width: 480px;
+}
+
+/* Right Column: Editorial Links Stack */
+.contact-links-col {
+  padding-top: 1rem;
+}
+
+.editorial-links-stack {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #000000;
+}
+
+.editorial-link-item-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.85rem 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: padding-left 150ms ease;
+}
+
+.editorial-link-item-wrap:hover {
+  padding-left: 0.75rem;
+}
+
+.editorial-big-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-headline);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000000;
+  transition: opacity 150ms ease;
+}
+
+.editorial-big-link:hover {
+  opacity: 0.6;
+}
+
+.link-arrow {
+  transition: transform 150ms ease;
+}
+
+.editorial-big-link:hover .link-arrow {
+  transform: translate(3px, -3px);
+}
+
+.link-sub-action {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #666666;
+}
+
+.email-raw-text {
+  color: #333333;
+}
+
+.copy-text-btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #000000;
+  padding: 0.15rem 0.4rem;
+  border: 1px solid var(--border-light);
+  transition: all 150ms ease;
+}
+
+.copy-text-btn:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.copied-status {
+  color: #000000;
+  font-weight: 700;
+}
+
+.link-handle-hint {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  color: #888888;
+}
+
+@media (max-width: 900px) {
+  .contact-main-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}

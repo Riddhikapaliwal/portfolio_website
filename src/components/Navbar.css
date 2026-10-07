@@ -1,0 +1,219 @@
+/* ==============================================================================
+   MINIMAL NAVBAR STYLES
+   Pure white, crisp black text, hairline border, no gradients
+   ============================================================================== */
+
+.minimal-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-light);
+  height: 64px;
+  transition: border-color 150ms ease;
+}
+
+.minimal-navbar.scrolled {
+  border-bottom-color: #000000;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Brand Name */
+.navbar-brand-name {
+  font-family: var(--font-headline);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-transform: uppercase;
+  transition: opacity 150ms ease;
+}
+
+.navbar-brand-name:hover {
+  opacity: 0.6;
+}
+
+/* Desktop Links */
+.desktop-navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-text-link {
+  font-family: var(--font-headline);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #666666;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 150ms ease;
+}
+
+.nav-text-link:hover {
+  color: #000000;
+}
+
+.nav-text-link.active {
+  color: #000000;
+}
+
+.nav-text-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #000000;
+}
+
+/* Resume link */
+.nav-resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--font-headline);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 1px;
+  transition: transform 150ms ease;
+}
+
+.nav-resume-link:hover {
+  transform: translateY(-1px);
+}
+
+.nav-resume-link:hover .arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+.arrow-icon {
+  transition: transform 150ms ease;
+}
+
+/* Reopen Intro Icons */
+.intro-reopen-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--border-light);
+}
+
+.icon-reopen-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border-light);
+  color: #666666;
+  transition: all 150ms ease;
+}
+
+.icon-reopen-btn:hover {
+  color: #000000;
+  border-color: #000000;
+  background-color: #F8F8F8;
+}
+
+/* Mobile Toggle */
+.mobile-hamburger-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #000000;
+}
+
+/* Mobile Drawer */
+.mobile-nav-drawer {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #000000;
+  padding: 2rem 0;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 220ms ease, opacity 200ms ease;
+}
+
+.mobile-nav-drawer.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.mobile-text-link {
+  font-family: var(--font-headline);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.mobile-drawer-bottom {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.mobile-alt-btn {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #666666;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border-light);
+}
+
+@media (max-width: 860px) {
+  .desktop-navbar-nav {
+    display: none;
+  }
+  .mobile-hamburger-btn {
+    display: flex;
+  }
+  .mobile-nav-drawer {
+    display: block;
+  }
+}

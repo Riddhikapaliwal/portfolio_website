@@ -1,0 +1,111 @@
+/* ==============================================================================
+   SKILLS DIRECTORY / INDEX COMPONENT STYLES
+   Typographic index style, no logo wall, no cards, clean horizontal rows
+   ============================================================================== */
+
+.skills-directory-section {
+  background-color: #FFFFFF;
+}
+
+.skills-header-row {
+  margin-bottom: 4rem;
+}
+
+.skills-editorial-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #000000;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+
+.skills-editorial-sub {
+  font-size: 1.15rem;
+  color: #666666;
+  max-width: 600px;
+}
+
+/* Typographic Directory Index */
+.skills-index-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #000000;
+}
+
+.skills-index-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: baseline;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: background-color 150ms ease, padding-left 150ms ease;
+}
+
+.skills-index-row:hover {
+  background-color: #FAFAFA;
+  padding-left: 1rem;
+}
+
+.skills-cat-label-col {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.skills-cat-num {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #888888;
+}
+
+.skills-cat-name {
+  font-family: var(--font-headline);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.skills-cat-content-col {
+  display: flex;
+  align-items: center;
+}
+
+.skills-items-string {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222222;
+  letter-spacing: -0.01em;
+}
+
+/* Footnote */
+.skills-footer-note {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--border-light);
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  color: #777777;
+}
+
+.footnote-prefix {
+  color: #000000;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+  .skills-index-row {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    padding: 1.5rem 0;
+  }
+}

@@ -1,0 +1,128 @@
+/* ==============================================================================
+   HACKATHONS COMPONENT STYLES
+   Editorial 2-column cards showcasing sprint engineering
+   ============================================================================== */
+
+.hackathons-section {
+  background-color: var(--bg-primary);
+}
+
+.hackathons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.hackathon-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all var(--transition-normal);
+}
+
+.hackathon-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.hack-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hack-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hack-standing-pill {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: var(--accent);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.hack-tier-tag {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.hack-year {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.hack-name {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.hack-takeaway-box {
+  background-color: var(--bg-secondary);
+  padding: 1.15rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.takeaway-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.takeaway-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.hack-footer-indicators {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+}
+
+.indicator-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 800px) {
+  .hackathons-grid {
+    grid-template-columns: 1fr;
+  }
+}

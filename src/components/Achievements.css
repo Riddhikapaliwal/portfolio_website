@@ -1,0 +1,107 @@
+/* ==============================================================================
+   ACHIEVEMENTS COMPONENT STYLES
+   Giant typography, stark contrast, no cards
+   ============================================================================== */
+
+.achievements-stark-section {
+  background-color: #FFFFFF;
+}
+
+.achievements-header-row {
+  margin-bottom: 4.5rem;
+}
+
+.achievements-editorial-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #000000;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+
+.achievements-editorial-sub {
+  font-size: 1.15rem;
+  color: #666666;
+  max-width: 600px;
+}
+
+/* Giant Typography Stack */
+.giant-achievements-stack {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #000000;
+}
+
+.giant-achievement-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  padding: 2.75rem 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: background-color 150ms ease, padding-left 150ms ease;
+}
+
+.giant-achievement-row:hover {
+  background-color: #FAFAFA;
+  padding-left: 1rem;
+}
+
+.achievement-stat-display {
+  display: flex;
+  align-items: baseline;
+}
+
+.giant-stat-text {
+  font-family: var(--font-headline);
+  font-size: clamp(3rem, 6vw, 4.75rem);
+  font-weight: 700;
+  color: #000000;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.achievement-meta-display {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.achievement-title-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.achievement-headline {
+  font-family: var(--font-headline);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.015em;
+}
+
+.achievement-year-stamp {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #888888;
+}
+
+.achievement-narrative-detail {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444444;
+  max-width: 680px;
+}
+
+@media (max-width: 800px) {
+  .giant-achievement-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+}
